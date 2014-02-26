@@ -6,8 +6,6 @@
 console.log ("Hi there. About to make a pretty cool visualization about Syria.");
 
 
-
-
 //This function will make magic with the dataset that I pointed to in googleLoaded. Gave the function a short hand name
 //of Syria to work with.
 function dataLoaded(SYRIA) {
@@ -28,6 +26,27 @@ function dataLoaded(SYRIA) {
 	
 	//Push the headers to myDataArray. So now the first "row" so to speak will be the headers Date and Mentions of Syria.
 	myDataArray.push(headerArray);
+	
+	//Now I create a loop that is an ARRAY of an ARRAY so that the google visualization will be able to read my data.
+	//I have to specify the starting point, or the parameters of the for loop as well as the length of the loop and the
+	//number of times to iterate. Then I create an object to work with in the loop and set my MENTIONS.results iterated 
+	//through this loop to the new variable currObj. Then I have to go into the attributes of each result of my json, and
+	//pull out the date and the count of mentions. And then I push that to the empty (all but the headers) array I have 
+	//above. This will iterate until there are no more results in my json to go through and then it will stop.
+	for(var i=0; i<myObsData.length; i++) {
+		
+		//You want to get whats in the observations based on its INDEX. Created reference to current object in list.
+		var currObj = myObsData[i];
+	
+		//Now create an array IN an array by taking each value from month and count and pushing to the array shell
+		var currArray = [currObj.month, currObj.count];
+		
+		//Pushing to the array shell above so that you're making into the larger array.
+		myDataArray.push(currArray);
+	}
+	//Just checing to see if myDataArray works!
+	console.log(myDataArray);
+	
 	
 }
 
