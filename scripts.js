@@ -49,12 +49,19 @@ function dataLoaded(SYRIA) {
 	
 	//Now I feed data to visualization library. Whoot almost there!
 	var data = google.visualization.arrayToDataTable(myDataArray);
-
+	
+	//Create options object to add fanciness to the chart, like a title.
+	var chartOptions = {
+	title: "Mentions of Syria in U.S. Congress Between 2009-2014"
+	};
+	
+//Now I tell it to create a line chart and give it a div that matches the index.html, meaning I should now go back and create
+//that div in my index. 
+	var mySyriaChart = new google.visualization.LineChart(document.getElementById('myChartDiv'));
+//Telling it to draw it using my data and using my options! Finished! So exciting!
+mySyriaChart.draw(data, chartOptions);
 	
 }
-
-
-
 
 
 
