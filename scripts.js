@@ -14,6 +14,17 @@ console.log ("Hi there. About to make a pretty cool visualization about Syria.")
 
 
 
+
+//Adding the googleLoaded function. This function will go and get my data and eventually display it on the page! :-)
+function googleLoaded(){
+	console.log ("Google has loaded")
+	
+
+}
+
+
+
+
 //Adding my new function pageLoaded and console logging to make sure that the pageLoaded function activates on
 //document ready. This will eventually load my google visualization.
 function pageLoaded () {
