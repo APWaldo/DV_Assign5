@@ -8,7 +8,14 @@ console.log ("Hi there. About to make a pretty cool visualization about Syria.")
 
 
 
-
+//This function will make magic with the dataset that I pointed to in googleLoaded.  
+function dataLoaded() {
+	
+	//Console log that the data has loaded just to double check. 
+	console.log ("Data has loaded.")
+	
+	
+}
 
 
 
