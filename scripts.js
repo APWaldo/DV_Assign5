@@ -47,6 +47,9 @@ function dataLoaded(SYRIA) {
 	//Just checing to see if myDataArray works!
 	console.log(myDataArray);
 	
+	//Now I feed data to visualization library. Whoot almost there!
+	var data = google.visualization.arrayToDataTable(myDataArray);
+
 	
 }
 
