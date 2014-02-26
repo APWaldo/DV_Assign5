@@ -8,12 +8,26 @@ console.log ("Hi there. About to make a pretty cool visualization about Syria.")
 
 
 
-//This function will make magic with the dataset that I pointed to in googleLoaded.  
-function dataLoaded() {
+//This function will make magic with the dataset that I pointed to in googleLoaded. Gave the function a short hand name
+//of Syria to work with.
+function dataLoaded(SYRIA) {
 	
-	//Console log that the data has loaded just to double check. 
-	console.log ("Data has loaded.")
+	//Console log that the data has loaded just to double check. Put the name of the data SYRIA just to check.
+	console.log (SYRIA)
 	
+	//Create a loop that is a short cut straight to what we want to chart. First
+	//start by creating a variable. We want to work with results (and from that, we want to plot count.)
+	var myObsData = MENTIONS.results;
+	
+	//Create an empty data array myDataArray in which to push all of my new data when I make an array of an array.
+	var myDataArray = [];
+	
+	//Add the headers of the dataArray so that I know what I am working with. In the case of Syria, I am working with
+	//Data and Mentions of Syria
+	var headerArray = ["Date", "Mentions of Syria"];
+	
+	//Push the headers to myDataArray. So now the first "row" so to speak will be the headers Date and Mentions of Syria.
+	myDataArray.push(headerArray);
 	
 }
 
