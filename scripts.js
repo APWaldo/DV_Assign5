@@ -14,6 +14,14 @@ console.log ("Hi there. About to make a pretty cool visualization about Syria.")
 
 
 
+//Adding my new function pageLoaded and console logging to make sure that the pageLoaded function activates on
+//document ready. This will eventually load my google visualization.
+function pageLoaded () {
+	
+	console.log ("Got to page loaded.");
+	
+}
+
 
 
 //Adding my document ready to activate my pageLoaded function (which will activate the visualization).
