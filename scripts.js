@@ -19,6 +19,10 @@ console.log ("Hi there. About to make a pretty cool visualization about Syria.")
 function googleLoaded(){
 	console.log ("Google has loaded")
 	
+	//Time to load data with get function. This will tell my page to go and get this data set and use the function
+	//dataLoaded to render it. 
+	$.get("mentions_syria_09_14.json", dataLoaded, "json");
+	
 
 }
 
