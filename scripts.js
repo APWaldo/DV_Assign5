@@ -18,7 +18,14 @@ console.log ("Hi there. About to make a pretty cool visualization about Syria.")
 //document ready. This will eventually load my google visualization.
 function pageLoaded () {
 	
+	//console log checks to make sure that page loaded works.
 	console.log ("Got to page loaded.");
+	
+	//Load the google visualization library with the callback googleLoaded. This will tell the browser to load the function
+	//googleLoaded. This is using the google visualization script to work. But now I have to make sure that I have
+	//my function googleLoaded working.
+	google.load("visualization", "1", {packages:["corechart"], callback: "googleLoaded"});
+		
 	
 }
 
