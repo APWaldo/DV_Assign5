@@ -15,17 +15,17 @@ function dataLoaded(SYRIA) {
 	
 	//Create a loop that is a short cut straight to what we want to chart. First
 	//start by creating a variable. We want to work with results (and from that, we want to plot count.)
-	var myObsData = MENTIONS.results;
+	var mySyriaData = SYRIA.results;
 	
 	//Create an empty data array myDataArray in which to push all of my new data when I make an array of an array.
-	var myDataArray = [];
+	var mySyriaArray = [];
 	
 	//Add the headers of the dataArray so that I know what I am working with. In the case of Syria, I am working with
 	//Data and Mentions of Syria
-	var headerArray = ["Date", "Mentions of Syria"];
+	var headerSyriaArray = ["Date", "Mentions of Syria"];
 	
 	//Push the headers to myDataArray. So now the first "row" so to speak will be the headers Date and Mentions of Syria.
-	myDataArray.push(headerArray);
+	mySyriaArray.push(headerSyriaArray);
 	
 	//Now I create a loop that is an ARRAY of an ARRAY so that the google visualization will be able to read my data.
 	//I have to specify the starting point, or the parameters of the for loop as well as the length of the loop and the
@@ -33,22 +33,22 @@ function dataLoaded(SYRIA) {
 	//through this loop to the new variable currObj. Then I have to go into the attributes of each result of my json, and
 	//pull out the date and the count of mentions. And then I push that to the empty (all but the headers) array I have 
 	//above. This will iterate until there are no more results in my json to go through and then it will stop.
-	for(var i=0; i<myObsData.length; i++) {
+	for(var i=0; i<mySyriaData.length; i++) {
 		
 		//You want to get whats in the observations based on its INDEX. Created reference to current object in list.
-		var currObj = myObsData[i];
-	
+		var currObj = mySyriaData[i];
+
 		//Now create an array IN an array by taking each value from month and count and pushing to the array shell
 		var currArray = [currObj.month, currObj.count];
 		
 		//Pushing to the array shell above so that you're making into the larger array.
-		myDataArray.push(currArray);
+		mySyriaArray.push(currArray);
 	}
 	//Just checing to see if myDataArray works!
-	console.log(myDataArray);
+	console.log(mySyriaArray);
 	
 	//Now I feed data to visualization library. Whoot almost there!
-	var data = google.visualization.arrayToDataTable(myDataArray);
+	var data = google.visualization.arrayToDataTable(mySyriaArray);
 	
 	//Create options object to add fanciness to the chart, like a title.
 	var chartOptions = {
@@ -57,7 +57,7 @@ function dataLoaded(SYRIA) {
 	
 //Now I tell it to create a line chart and give it a div that matches the index.html, meaning I should now go back and create
 //that div in my index. 
-	var mySyriaChart = new google.visualization.LineChart(document.getElementById('myChartDiv'));
+	var mySyriaChart = new google.visualization.LineChart(document.getElementById('mySyriaChartDiv'));
 //Telling it to draw it using my data and using my options! Finished! So exciting!
 mySyriaChart.draw(data, chartOptions);
 	
