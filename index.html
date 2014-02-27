@@ -10,13 +10,40 @@
 		 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		<!--Adding javascript scripts second. You must load jquery first.-->
 		<script src="scripts.js" type="text/javascript"></script>
+		<style>
+			@font-face {
+				font-family: Vegur;
+				src: url('vegur-light.otf');
+				}
+			.baseClass{
+				color: #00FFCC;
+				font-size: 20px;
+				font-family: Vegur;
+				position: relative;
+				display: inline;
+				float: left;
+				padding: 50px;
+				margin: 40px;
+				height: 40px;
+			}
+			.h1{
+				color: black;
+				margin: 35px;
+				font-family: Vegur;
+			}
+			.h2{
+				color: black;
+				margin: 35px;
+				font-family: Vegur;
+			}
+		</style>
 	</head>
 	<body>
 		<!--Adding new titles for the index-->
-		<h1>Mentions of Syria in Congress January 20, 2009 to February 25, 2014</h1>
-		<h2>Using Sunlight Foundation's Capitol Words API</h2>
+		<h1 class = "h1">Mentions of Syria in Congress 2009 to 2014</h1>
+		<h2 class = "h2">Using Sunlight Foundation's Capitol Words API</h2>
 		<!--Creating a new div for the visualization-->
-		<div id="mySyriaChartDiv"></div>
+		<div id="mySyriaChartDiv" style="width: 900px; height: 500px;"></div>
 	</body>
 </html>
 
